@@ -1,0 +1,644 @@
+.ball {
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    background: #c00;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transition: transform 1s;
+}
+
+.quadrado {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 120, 220, 1);
+    transition: transform 1s;
+}
+
+.triangulo {
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-top: none;
+    transition: transform 1s;
+}
+.trapezio {
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    width: 150px;
+    height: 150px;
+    transition: transform 1s;
+    background-color: rgba(0, 120, 220, 1);
+}
+.triangulo-obtuso {
+    width: 1px;
+    height: 1px;
+    border: solid 90px transparent;
+    border-bottom: solid 90px #99f;
+    border-right-width: 30px;
+    border-top: none;
+    transition: transform 1s;
+    -webkit-transform: skew(-45deg);
+    -moz-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    -o-transform: skew(-45deg);
+    transform: skew(-45deg);
+}
+
+.paralelogramo {
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    width: 150px;
+    height: 150px;
+    transition: transform 1s;
+    background-color: rgb(0, 238, 255);
+}
+
+
+.meia-lua {
+    -webkit-clip-path: polygon(5% 21%, 98% 21%, 92% 37%, 78% 51%, 63% 59%, 45% 59%, 25% 55%, 11% 40%);
+    clip-path: polygon(5% 21%, 98% 21%, 92% 37%, 78% 51%, 63% 59%, 45% 59%, 25% 55%, 11% 40%);
+    width: 150px;
+    height: 150px;
+    transition: transform 1s;
+    background: #eefdf4;
+}
+
+.quarto-de-lua {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    background: #eefdf4;
+}
+
+.retangulo {
+    width: 100px;
+    height: 50px;
+    background: #26A65B;
+    transition: transform 1s;
+
+}
+/* Encaixe */
+.encaixe{
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    background-color: rgb(153, 0, 255);
+}
+
+/*bisel */
+.bisel {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+background-color: rgb(255, 0, 0);
+}
+/* Close */
+.close {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+    background-color: rgb(172, 11, 11);
+}
+
+/* heptagono */
+.heptagono {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: rgb(255, 203, 125);
+}
+/* Hexágono */
+.hexagono {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: rgb(24, 48, 43);
+}
+
+/* Pentágono */
+.pentagono {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: rgb(236, 232, 17);
+}
+
+/* Octongono */
+.octogono {
+    height: 200px;
+    width: 200px;
+    transition: transform 1s;
+    background-color: rgba(0, 120, 220, 1);
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+/* Aleatorio1 */
+.aleatorio1 {
+    height: 200px;
+    width: 200px;
+    transition: transform 1s;
+    background-color: rgb(26, 221, 235);
+    -webkit-clip-path: polygon(5% 3%, 6% 95%, 97% 4%, 95% 98%, 54% 5%, 50% 88%);
+    clip-path: polygon(5% 3%, 6% 95%, 97% 4%, 95% 98%, 54% 5%, 50% 88%);
+    background-color: rgb(161, 2, 182);
+}
+
+
+.rombo {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0, 120, 220, 1);
+    position: relative;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(51% 7%, 81% 34%, 51% 91%, 20% 34%);
+    clip-path: polygon(51% 7%, 81% 34%, 51% 91%, 20% 34%);
+}
+
+
+/* nonagon inicio  */
+.nonagon {
+    -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    width: 200px;
+    height: 200px;
+    transition: transform 1s;
+    background-color: rgb(24, 236, 17);
+}
+
+
+/* Lupa*/
+
+.lupa{
+    font-size: 18em; /* Este valor controla el tamaño. */
+    display: block;
+    background: transparent;
+    width: 0.4em;
+    height: 0.4em;
+    border: 0.1em solid #63639c;
+    position: relative;
+    border-radius: 0.35em;
+    text-align: center;
+    transition: transform 2s;
+   }
+   .lupa::before
+   {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: #63639c;
+    width: 0.35em;
+    height: 0.08em;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+         transition: transform 1s;
+   }
+   
+
+
+
+/* Estrella de 12 picos */
+
+.estrella-12 {
+    -webkit-clip-path: polygon(58% 6%, 56% 31%, 78% 13%, 62% 38%, 91% 32%, 64% 48%, 91% 54%, 62% 57%, 83% 75%, 55% 63%, 61% 88%, 45% 69%, 32% 87%, 34% 66%, 13% 74%, 26% 57%, 5% 55%, 26% 47%, 7% 34%, 29% 36%, 18% 15%, 38% 29%, 37% 5%, 48% 28%);
+    clip-path: polygon(58% 6%, 56% 31%, 78% 13%, 62% 38%, 91% 32%, 64% 48%, 91% 54%, 62% 57%, 83% 75%, 55% 63%, 61% 88%, 45% 69%, 32% 87%, 34% 66%, 13% 74%, 26% 57%, 5% 55%, 26% 47%, 7% 34%, 29% 36%, 18% 15%, 38% 29%, 37% 5%, 48% 28%);
+    width: 200px;
+    height: 200px;
+    transition: transform 1s;
+    background-color: rgb(226, 155, 1);
+}
+
+/* Cruz */
+
+.cruz {
+    -webkit-clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    width: 200px;
+    height: 200px;
+    transition: transform 1s;
+    background:  rgb(17, 21, 236);
+}
+.decagono {
+    -webkit-clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    background: rgb(17, 236, 189);
+}
+
+/* Estrela de 5 pontas */
+.estrelaCinco {
+    width: 0px;
+    height: 0px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+
+    display: block;
+    color: rgba(0, 120, 220, 1);
+    transition: transform 1s;
+
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid rgb(220, 0, 0);
+    border-left: 100px solid transparent;
+
+    transform: rotate(35deg);
+
+    margin-top: 20%;
+}
+
+.estrelaCinco::before {
+    content: '';
+    transition: transform 1s;
+    width: 0;
+    height: 0;
+
+    border-bottom: 80px solid rgba(0, 120, 220, 1);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+
+    position: absolute;
+    top: -45px;
+    left: -65px;
+
+    transform: rotate(-35deg);
+}
+
+.estrelaCinco::after {
+    content: '';
+
+    width: 0px;
+    height: 0px;
+    transition: transform 1s;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid rgba(0, 120, 220, 1);
+    border-left: 100px solid transparent;
+
+    position: absolute;
+    top: 3px;
+    left: -105px;
+
+    transform: rotate(-70deg);
+}
+
+/* Estrela de 6 pontas */
+.estrelaSeis {
+    width: 0;
+    height: 0;
+    transition: transform 1s;
+    /*border-top: 25px solid transparent;*/
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 120px solid rgba(0, 120, 220, 1);
+
+    position: relative;
+}
+
+.estrelaSeis::before {
+    content: '';
+    transition: transform 1s;
+    /*border-top: 25px solid transparent;*/
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 120px solid rgba(0, 120, 220, 1);
+
+    position: absolute;
+    top: 35px;
+    left: -75px;
+}
+
+
+.coracao {
+    width: 100px;
+    height: 90px;
+
+    position: relative;
+    transition: transform 1s;
+    margin-top: 3%;
+}
+
+.coracao::before {
+    content: "";
+    width: 100px;
+    height: 160px;
+    position: absolute;
+    left: 50px;
+    top: 0;
+    background: red;
+
+    border-radius: 50px 50px 0 0;
+    transition: transform 1s;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.coracao::after {
+    content: "";
+    width: 100px;
+    height: 160px;
+    transition: transform 1s;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    background: red;
+
+    border-radius: 50px 50px 0 0;
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+}
+
+.infinito {
+    width: 200px;
+    height: 100px;
+
+    position: relative;
+
+    box-sizing: content-box;
+    transition: transform 1s;
+    margin-top: 5%;
+}
+
+.infinito::before {
+    content: '';
+
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s;
+    border: 20px solid rgba(212, 175, 75, 1);
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(-45deg);
+}
+
+.infinito::after {
+    content: '';
+
+    width: 50px;
+    height: 50px;
+    transition: transform 1s;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    /* width x2 */
+
+    border: 20px solid rgba(212, 175, 75, 1);
+    border-radius: 50% 50% 0 50%;
+    transform: rotate(135deg);
+}
+
+
+.lua {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    box-shadow: -15px 15px 0 5px white;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+
+.losango {
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);    
+    width: 100px;
+    height: 100px;
+    background: rgb(223, 0, 130);
+    transition: transform 1s;
+}
+
+.trapesio {
+    width: 300px;
+    height: 100px;
+    background: #fc0;
+    border-width: 160px 100px 50px;
+    border-top: none;
+    transition: transform 1s;
+}
+
+.retangulo-multi1 {
+    line-height: 0;
+    width: 0;
+    height: 0;
+    transition: transform 1s;
+    border-style: solid;
+    border-color: #f00 #0f0 #00f #fc0;
+    border-width: 0 160px 100px 50px;
+}
+
+.retangulo-multi2 {
+    line-height: 0;
+    width: 0;
+    height: 30px;
+    border-style: solid;
+    border-color: #f00 #0f0 #00f #fc0;
+    border-width: 10px 50px 60px;
+    transition: transform 1s;
+}
+
+.retangulo-multi3 {
+    line-height: 0;
+    width: 30px;
+    height: 0;
+    border-style: solid;
+    border-color: #f00 #0f0 #00f #fc0;
+    border-width: 10px 35px 90px;
+    transition: transform 1s;
+}
+
+
+
+
+.retangulo-multi4 {
+    width: 100px;
+    height: 100px;
+    transition: transform 1s;
+    -webkit-clip-path: polygon(8% 26%, 7% 72%, 95% 29%, 95% 71%, 47% 71%, 39% 25%, 26% 76%, 94% 26%);
+    clip-path: polygon(8% 26%, 7% 72%, 95% 29%, 95% 71%, 47% 71%, 39% 25%, 26% 76%, 94% 26%);
+    background: #dd2712;
+}
+
+.quadrado-multi1 {
+    line-height: 0;
+    /* correção para IE (arg!) */
+    width: 0;
+    height: 0;
+    transition: transform 1s;
+    border: 50px solid;
+    border-color: #f00 #0f0 #0f0 #fc0;
+}
+
+.quadrado-multi2 {
+    width: 30px;
+    height: 30px;
+    border: 25px solid;
+    /* As 4 bordas sólidas com 25px de espessura */
+    border-color: #f00 #0f0 #00f #fc0;
+    /* cores: topo, direita, inferior, esquerda */
+    transition: transform 1s;
+}
+
+/* Muda cores da pagina sem parar  */
+body {
+    background-position: top center;
+    background-size: 100% auto;
+    align-items: center;
+    -webkit-animation: colorchange 10s infinite;
+    animation: colorchange 10s infinite;
+    transition: transform 2s;
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        background: #25fff0;
+    }
+
+    25% {
+        background: #dd2712;
+    }
+
+    50% {
+        background: #3dda1d;
+    }
+
+    75% {
+        background: #ff9913;
+    }
+
+    100% {
+        background: #b40bf7;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background: #02f1b6;
+    }
+
+    25% {
+        background: #ec09e1;
+    }
+
+    50% {
+        background: #1498f0;
+    }
+
+    75% {
+        background: #f0f323;
+    }
+
+    100% {
+        background: #f1159d;
+    }
+}
+
+body {
+    background: #e0e0eb;
+    padding: 10px;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: transform 1s;
+}
+
+html {
+    font-family: serif;
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: Calibri;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+}
+img {
+    width:100%;
+    height:100%;
+}
+
+
+/* cores  */
+.azul {
+    background: rgb(30, 154, 255);
+    background-color: rgb(30, 154, 255);
+}
+.vermelho {
+    background: rgb(255, 30, 30);
+    background-color:rgb(255, 30, 30);
+}
+.verde {
+    background: rgb(101, 255, 30);
+    background-color: rgb(101, 255, 30);
+}
+.roxo {
+    background: rgb(180, 22, 253);
+    background-color: rgb(180, 22, 253);
+}
+.azul-esverdeado {
+    background: rgb(6, 255, 180);
+    background-color: rgb(6, 255, 180);
+}
+.branco {
+    background: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.preto {
+    background: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+}
+.rosa  {
+    background: rgb(255, 30, 206);
+    background-color: rgb(255, 30, 206);
+}
+       
+
+.pequeno {
+    transform: scale(0.2);
+}
+
+.medio1 {
+    transform: scale(0.9);
+
+}
+
+.medio2 {
+    transform: scale(1);
+}
+
+.medio3 {
+    transform: scale(2.2);
+}
+
+.grande {
+    transform: scale(2.5);
+}
